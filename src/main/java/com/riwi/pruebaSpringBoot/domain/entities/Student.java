@@ -1,6 +1,6 @@
 package com.riwi.pruebaSpringBoot.domain.entities;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,8 +30,8 @@ public class Student {
     @Email
     @Column(length = 250, nullable = false)
     private String email;
-    @Column(nullable = false)
-    private Timestamp createAt;
+    @Builder.Default
+    private LocalDateTime createAt = LocalDateTime.now(); 
     @Column(nullable = false)
     private boolean active;
 

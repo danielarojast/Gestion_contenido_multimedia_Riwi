@@ -1,6 +1,6 @@
 package com.riwi.pruebaSpringBoot.domain.entities;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -32,8 +32,8 @@ public class ClassEntity {
     @Lob
     @Column(nullable = false) 
     private String description;
-    @Column(nullable = false)
-    private Timestamp createAt;
+    @Builder.Default
+    private LocalDateTime createAt = LocalDateTime.now(); 
     @Column(nullable = false)
     private boolean active; 
 

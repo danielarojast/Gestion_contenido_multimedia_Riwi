@@ -1,6 +1,6 @@
 package com.riwi.pruebaSpringBoot.api.dto.response;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import com.riwi.pruebaSpringBoot.utils.enums.TypeMultimedia;
 
@@ -17,7 +17,7 @@ public class MultimediaBasicResp {
     private Long id;
     private TypeMultimedia type;
     private String url;
-    private Timestamp createAt;
+    private LocalDateTime createAt;
     private boolean active; 
 
     private LessonBasicResp lesson;

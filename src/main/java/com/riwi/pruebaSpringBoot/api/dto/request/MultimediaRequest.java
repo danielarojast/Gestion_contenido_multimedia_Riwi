@@ -1,6 +1,5 @@
 package com.riwi.pruebaSpringBoot.api.dto.request;
 
-import java.sql.Timestamp;
 
 import org.hibernate.validator.constraints.URL;
 
@@ -25,9 +24,7 @@ public class MultimediaRequest {
     @URL
     @NotBlank(message = "Agregue la url")
     private String url;
-    @NotBlank(message = "La fecha y la hora son requeridas (AAAA-MM-DD HH:MM:SS)")
-    private Timestamp createAt;
-    @NotBlank(message = "Indica si el estudiante esta activa con true o no activa con false")
+    @NotNull(message = "Indica si el estudiante esta activa con true o no activa con false")
     private boolean active; 
 
     @NotNull(message = "El id de la leccion es obligatorio")
