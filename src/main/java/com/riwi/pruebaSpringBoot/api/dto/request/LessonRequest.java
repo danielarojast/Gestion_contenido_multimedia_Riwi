@@ -1,6 +1,8 @@
 package com.riwi.pruebaSpringBoot.api.dto.request;
 
 
+import java.util.List;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -26,4 +28,6 @@ public class LessonRequest {
     @NotNull(message = "El id de la clase es obligatorio")
     @Min(value = 1, message = "El id debe ser mayor a cero ")
     private Long classId;
+
+    private List<MultimediaRequest> multimedia;
 }
