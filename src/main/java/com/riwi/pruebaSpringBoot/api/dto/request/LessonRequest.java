@@ -1,6 +1,5 @@
 package com.riwi.pruebaSpringBoot.api.dto.request;
 
-import java.sql.Timestamp;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -21,9 +20,7 @@ public class LessonRequest {
     private String title;
     @NotBlank(message = "El contenido es requerido")
     private String content;
-    @NotBlank(message = "La fecha y la hora son requeridas (AAAA-MM-DD HH:MM:SS)")
-    private Timestamp createAt;
-    @NotBlank(message = "Indica si la leccion esta activa con true o no activa con false")
+    @NotNull(message = "Indica si la leccion esta activa con true o no activa con false")
     private boolean active; 
 
     @NotNull(message = "El id de la clase es obligatorio")

@@ -1,6 +1,6 @@
 package com.riwi.pruebaSpringBoot.domain.entities;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import org.hibernate.validator.constraints.URL;
 
@@ -33,8 +33,8 @@ public class Multimedia {
     @URL
     @Column(nullable = false)
     private String url;
-    @Column(nullable = false)
-    private Timestamp createAt;
+    @Builder.Default
+    private LocalDateTime createAt = LocalDateTime.now(); 
     @Column(nullable = false)
     private boolean active; 
 

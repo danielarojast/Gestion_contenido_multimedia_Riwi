@@ -1,6 +1,5 @@
 package com.riwi.pruebaSpringBoot.api.dto.request;
 
-import java.sql.Timestamp;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
@@ -23,9 +22,7 @@ public class StudentRequest {
     @Email
     @NotBlank(message = "El email es requerido")
     private String email;
-    @NotBlank(message = "La fecha y la hora son requeridas (AAAA-MM-DD HH:MM:SS)")
-    private Timestamp createAt;
-    @NotBlank(message = "Indica si el estudiante esta activa con true o no activa con false")
+    @NotNull(message = "Indica si el estudiante esta activa con true o no activa con false")
     private boolean active; 
 
     @NotNull(message = "El id de la clase es obligatorio")

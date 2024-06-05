@@ -1,6 +1,6 @@
 package com.riwi.pruebaSpringBoot.api.dto.response;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +15,7 @@ public class LessonBasicResp {
     private Long id;
     private String title;
     private String content;
-    private Timestamp createAt;
+    private LocalDateTime createAt;
     private boolean active; 
 
     private ClassBasicResp classEntity;
